@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        table{
+        padding-left:100px;
+        margin:20px;
+        font-size:25px;
+        }
+    </style>
+</head>
+<body bgcolor="#ffad33">
+<h3>Matrix & its Transpose</h3>
+<form action="/apply" method="POST">
+    {% csrf_token %}
+    Enter Row: <input type="text" name="Row"><br><br>
+    Enter Column: <input type="text" name="Column"><br><br>
+    Lower Limit: <input type="text" name="Lower_limit"><br><br>
+    Upper Limit: <input type="text" name="Upper_limit"><br><br>
+
+    <input type="submit" >
+</form>
+<table align="left">
+    <tr><th>Matrix:</th></tr>
+    {% for i in mat %}
+    <tr>
+        <td>
+            {{i}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<table>
+    <tr>
+        <th>Transpose:</th>
+    </tr>
+    {% for j in tra %}
+    <tr>
+        <td>{{j}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<!--<h1>Matrix:</h1>-->
+<!--{% for i in mat %}-->
+<!--<h1>{{i}} </h1>-->
+<!--{% endfor %}-->
+
+<!--<h1>Transpose:</h1>-->
+<!--{% for i in tra %}-->
+<!--<h1>{{i}} </h1>-->
+<!--{% endfor %}-->
+
+<!--<h1> Matrix : {{mat}} </h1>-->
+<!--<h1> Transpose : {{tra}} </h1>-->
+</body>
+</html>
